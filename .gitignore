@@ -1,0 +1,50 @@
+# PyATS runtime artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.cache/
+
+# PyATS log files and reports
+**/archive/
+**/runinfo/
+**/logs/
+TaskLog.html
+*_runinfo.yaml
+*_runinfo_*.yaml
+*_archive_*.tgz
+
+# PyATS job files
+.pyats*.args
+.pyats*.sync
+.pyats*.lock
+
+# Virtual Environment
+venv/
+env/
+.env/
+.venv/
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.DS_Store
+
+# Environment variables
+.env
+*.env
+
+# Temp files
+*.log
+*.tmp
+*.temp
+*~
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/

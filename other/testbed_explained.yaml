@@ -1,0 +1,40 @@
+---
+
+# Configuration for network devices
+devices:
+    Cat8000V:
+        alias: 'DevNet_Sandbox_Cat8000v'  # Human-readable name for the device
+        type: 'router'  # Type of device
+        os: 'iosxe'  # Operating system
+        platform: C8000V  # Hardware platform
+        credentials:
+            default:
+                username: admin  # Username for SSH login
+                password: C1sco12345  # Password for SSH login (use environment variables or secrets management)
+                # password: ${DEVICE_PASSWORD}  # Example of using an environment variable
+        connections:
+            cli:
+                protocol: ssh  # Protocol for connection
+                ip: devnetsandboxiosxe.cisco.com  # IP address or hostname
+                port: 22  # Port number
+                arguments:
+                    connection_timeout: 360  # Connection timeout in seconds
+
+# The provided YAML file is a configuration file for setting up SSH connections to network devices.
+# YAML (YAML Ain't Markup Language) is a human-readable data serialization standard that is commonly used for configuration files.
+# 
+# The file begins with three dashes (---), which is a convention in YAML to indicate the start of a document.
+# 
+# Under the devices key, there is a nested structure defining the configuration for a device named csr1000v-1. This device has several attributes:
+# 
+# alias: A human-readable name for the device, in this case, 'DevNet_Sandbox_CSR1000v'.
+# type: Specifies the type of device, which is 'router'.
+# os: Indicates the operating system running on the device, 'iosxe' in this case.
+# platform: Specifies the hardware platform, which is 'isr'.
+# The credentials section contains the login information required to access the device. Under the default key, the username is set to 'developer' and the password is set to 'C1sco12345'.
+# 
+# The connections section defines how to connect to the device. Under the cli key, the protocol is specified as 'ssh', which means the connection will be made using the SSH protocol. The ip key provides the IP address or hostname of the device, which is 'sandbox-iosxe-latest-1.cisco.com'. The port key specifies the port number for the SSH connection, which is 22.
+# 
+# Finally, the arguments section under cli contains additional parameters for the connection. In this case, there is a connection_timeout set to 360 seconds, which defines how long the system should wait before timing out the connection attempt.
+# 
+# Overall, this YAML configuration file is used to define the necessary details for establishing an SSH connection to a specific network device, including its credentials and connection parameters.

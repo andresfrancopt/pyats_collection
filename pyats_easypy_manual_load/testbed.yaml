@@ -1,0 +1,30 @@
+---
+devices:
+  R1:
+    connections:
+      cli:
+        ip: 10.48.71.141
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: cisco
+      enable:
+        password: cisco
+    os: ios
+    platform: IOSv
+    type: ios
+  R2:
+    connections:
+      cli:
+        ip: 10.48.71.142
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: cisco
+      enable:
+        password: cisco
+    os: ios
+    platform: IOSv
+    type: ios
